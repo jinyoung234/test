@@ -47,7 +47,8 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/button-has-type": "off"
   },
   "settings": {
     "import/resolver": {
