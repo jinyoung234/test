@@ -1,8 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CompletePage from '../pages/CompletePage/CompletePage';
-import OrderPage from '../pages/OrderPage/OrderPage';
-import SummaryPage from '../pages/SummaryPage/SummaryPage';
+import CompletePage from '../../pages/CompletePage/CompletePage';
+import OrderPage from '../../pages/OrderPage/OrderPage';
+import SummaryPage from '../../pages/SummaryPage/SummaryPage';
 
 function Router(): JSX.Element {
   return (

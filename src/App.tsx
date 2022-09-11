@@ -1,5 +1,5 @@
-import Router from './router/Router';
-import './style/App.css';
+import Router from './utils/router/Router';
+import './utils/style/App.css';
 
 function App(): JSX.Element {
   return <Router />;
