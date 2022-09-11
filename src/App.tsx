@@ -1,8 +1,8 @@
-import Page from './components/Page';
+import Router from './router/Router';
 import './style/App.css';
 
 function App(): JSX.Element {
-  return <Page />;
+  return <Router />;
 }
 
 export default App;
