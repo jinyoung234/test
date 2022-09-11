@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable import/no-extraneous-dependencies */
-import { setupServer } from 'msw/node';
+import { setupWorker } from 'msw';
 import { handlers } from './handlers';
 
 // mocking server 생성
-export const server = setupServer(...handlers);
+export const worker = setupWorker(...handlers);

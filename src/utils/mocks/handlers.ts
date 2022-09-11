@@ -9,11 +9,11 @@ export const handlers = [
       ctx.json([
         {
           name: 'America',
-          imagePath: '/images/america.jpeg',
+          imagePath: 'images/america.jpeg',
         },
         {
           name: 'England',
-          imagePath: '/images/england.jpeg',
+          imagePath: 'images/england.jpeg',
         },
       ])
     );
