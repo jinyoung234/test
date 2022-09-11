@@ -1,4 +1,4 @@
-import { useCheck } from '../../../hooks/useCheck';
+import { useCheck } from '../../hooks/useCheck';
 import Button from './Button';
 import CheckBox from './CheckBox';
 

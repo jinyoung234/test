@@ -1,4 +1,4 @@
-import SummaryComponent from '../../components/OrderPage/SummaryPage/SummaryComponent';
+import SummaryComponent from '../../components/SummaryPage/SummaryComponent';
 
 function SummaryPage(): JSX.Element {
   return <SummaryComponent />;
