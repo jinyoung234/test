@@ -1,10 +1,14 @@
 import Order from './Order';
 
-function OrderInfo(): JSX.Element {
+interface OrderInfoProps {
+  type: string;
+}
+
+function OrderInfo({ type }: OrderInfoProps): JSX.Element {
   return (
     <div>
       <h1>Travel Products</h1>
-      <Order />
+      <Order type={type} />
     </div>
   );
 }

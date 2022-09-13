@@ -32,7 +32,7 @@ function Options(): JSX.Element {
         width: '50%',
       }}
     >
-      <Order />
+      <Order type='Options' />
       <OptionCheckBox optionData={optionData} />
     </div>
   );
