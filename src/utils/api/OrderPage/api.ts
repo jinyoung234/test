@@ -17,3 +17,12 @@ export async function fetchImage() {
     console.log(err);
   }
 }
+
+export async function fetchOptions() {
+  try {
+    const res = await client.get('options');
+    return res.data;
+  } catch (err) {
+    console.log(err);
+  }
+}
