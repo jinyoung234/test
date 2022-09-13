@@ -1,5 +1,7 @@
+import OrderComponent from '../../components/OrderPage/OrderComponent';
+
 function OrderPage(): JSX.Element {
-  return <div>hi</div>;
+  return <OrderComponent />;
 }
 
 export default OrderPage;
