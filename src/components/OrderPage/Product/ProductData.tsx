@@ -1,5 +1,13 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/jsx-no-useless-fragment */
+import React, { useContext } from 'react';
+import {
+  OrderContext,
+  ProductsType,
+} from '../../../utils/contexts/OrderContext';
 import { IImageUrl } from './Products';
 
 interface ProductDataProps {
@@ -7,8 +15,14 @@ interface ProductDataProps {
 }
 
 function ProductData({ productData }: ProductDataProps): JSX.Element {
+  const [orderObject, updateItemCount] = useContext(OrderContext);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const currentValue = e.currentTarget.value;
+    const itemName = e.currentTarget.id;
+    updateItemCount(itemName as ProductsType, +currentValue, 'products');
+  };
   return (
-    <>
+    <div style={{ display: 'flex' }}>
       {productData?.map((img, i) => (
         <div
           style={{
@@ -34,11 +48,12 @@ function ProductData({ productData }: ProductDataProps): JSX.Element {
               name='quantity'
               min='0'
               defaultValue={0}
+              onChange={handleChange}
             />
           </form>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 
