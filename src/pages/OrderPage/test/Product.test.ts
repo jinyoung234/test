@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { render, screen } from '@testing-library/react';
 import { rest } from 'msw';
+import { render, screen } from '../../../utils/test/customRender';
 import OrderComponent from '../../../components/OrderPage/OrderComponent';
 import { server } from '../../../utils/mocks/server';
 import { mockServer } from '../../../utils/mocks/setUpTest';
