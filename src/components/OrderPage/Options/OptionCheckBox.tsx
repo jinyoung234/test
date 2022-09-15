@@ -1,6 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/jsx-no-useless-fragment */
 
+import React, { useContext } from 'react';
+import {
+  OptionsType,
+  OrderContext,
+} from '../../../utils/contexts/OrderContext';
 import { IOptionData } from './Options';
 
 interface OptionCheckBoxProps {
@@ -8,6 +13,12 @@ interface OptionCheckBoxProps {
 }
 
 function OptionCheckBox({ optionData }: OptionCheckBoxProps): JSX.Element {
+  const [orderObject, updateItemCount] = useContext(OrderContext);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const idValue = e.currentTarget.id;
+    const isCheck = e.currentTarget.checked;
+    updateItemCount(idValue as OptionsType, isCheck ? 1 : 0, 'options');
+  };
   return (
     <>
       {optionData?.map((option, i) => (
@@ -16,7 +27,12 @@ function OptionCheckBox({ optionData }: OptionCheckBoxProps): JSX.Element {
             <label htmlFor={option.name} style={{ textAlign: 'right' }}>
               {option.name}
             </label>
-            <input id={option.name} style={{ marginLeft: 7 }} type='checkbox' />
+            <input
+              onChange={handleChange}
+              id={option.name}
+              style={{ marginLeft: 7 }}
+              type='checkbox'
+            />
           </form>
         </div>
       ))}
