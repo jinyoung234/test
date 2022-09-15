@@ -8,7 +8,7 @@ function OrderInfo({ type }: OrderInfoProps): JSX.Element {
   return (
     <div>
       <h1>Travel Products</h1>
-      <Order type={type} />
+      <Order isProduct type={type} />
     </div>
   );
 }
